@@ -1,4 +1,4 @@
-# pyspedas_examples
+# PySPEDAS Examples
 
 This project contains examples and turorials of using pySPEDAS.
 
