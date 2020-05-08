@@ -1,11 +1,8 @@
-
 """
-File:
-    ex_spectra.py
+Example of plotting a spectrogram.
 
-Description:
-    Basic example of plotting both a line and a spectrogram with THEMIS data.
-    Download THEMIS data and create a plot.
+Download THEMIS data and plot two panels, one with line plot and
+one with a spectrogram.
 
 """
 
@@ -14,6 +11,7 @@ import pytplot
 
 
 def ex_spectra():
+    """Download THEMIS data and create a plot."""
     # Delete any existing pytplot variables
     pytplot.del_data()
 
@@ -28,7 +26,7 @@ def ex_spectra():
     # Specify options
     pytplot.ylim('tha_pos', -23000.0, 81000.0)
     pytplot.ylim('tha_psif_en_eflux', 10000.0, 4000000.0)
-    pytplot.options('tha_psif_en_eflux', 'colormap', 'viridis')
+    pytplot.options('tha_psif_en_eflux', 'colormap', 'jet')
     pytplot.tplot_options('title', 'tha 2015-12-31')
 
     # Plot line and spectrogram

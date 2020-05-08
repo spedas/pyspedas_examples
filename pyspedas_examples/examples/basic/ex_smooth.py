@@ -1,11 +1,7 @@
-
 """
-File:
-    ex_test_smooth.py
+Applies the tsmooth function.
 
-Description:
-    Applies the tsmooth function.
-    To be compared with similar IDL function.
+This can be compared to the similar IDL function.
 
 """
 
@@ -14,7 +10,7 @@ from pyspedas.analysis.tsmooth import tsmooth
 
 
 def ex_test_smooth():
-
+    """Smooth data."""
     t = [1., 2., 3., 4., 5., 6., 7., 8., 9., 10., 11., 12.]
     y = [3., 5., 8., 15., 20., 1., 2., 3., 4., 5., 6., 4.]
 

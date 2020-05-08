@@ -1,11 +1,7 @@
-
 """
-File:
-    ex_basic.py
+Basic example to verify that the installation works correctly.
 
-Description:
-    Basic example to verify that the installation works correctly.
-    Download THEMIS data and plot it.
+Download THEMIS data and plot it.
 
 """
 
@@ -14,7 +10,7 @@ import pytplot
 
 
 def ex_basic():
-
+    """Download and plot THEMIS data."""
     # Delete any existing pytplot variables
     pytplot.del_data()
 

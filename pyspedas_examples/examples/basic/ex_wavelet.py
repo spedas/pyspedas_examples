@@ -37,4 +37,4 @@ def ex_wavelet():
 
 
 # Run the example code
-ex_wavelet()
+# ex_wavelet()

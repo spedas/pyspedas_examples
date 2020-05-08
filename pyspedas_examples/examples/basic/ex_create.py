@@ -1,11 +1,7 @@
-
 """
-File:
-    ex_create.py
+Creates a new pytplot object and applies analysis functions.
 
-Description:
-    Creates a new pytplot object and applies analysis functions.
-
+Create new pytplot variable from your data, and apply analysis functions.
 """
 
 import pyspedas
@@ -15,7 +11,7 @@ from pyspedas.utilities.time_double import time_float
 
 
 def ex_create():
-
+    """Show how to create and plot pytplot variables."""
     # Delete any existing pytplot variables
     pytplot.del_data()
 

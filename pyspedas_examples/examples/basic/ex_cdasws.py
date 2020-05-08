@@ -1,12 +1,10 @@
-
 """
-File:
-    ex_cdasws.py
+Example of how to use cdasws to download cdf files using NASA CDA web services.
 
-Description:
-    Example of how to use cdasws to find cdf files with NASA CDA web services.
-    For more information on cdasws, see:
-        https://pypi.org/project/cdasws/
+This uses both the cdasws, and the pyspedas interface to cdasws.
+
+For more information on cdasws, see:
+    https://pypi.org/project/cdasws/
 
 """
 
@@ -15,6 +13,7 @@ from pyspedas.cdagui.cdaweb import CDAWeb
 
 
 def ex_cdasws():
+    """Demonstrate how to use cdasws."""
     # Create an cdasws instance
     cdas = CdasWs()
     # Get a list of instrument types

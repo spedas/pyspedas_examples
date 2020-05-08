@@ -1,19 +1,16 @@
+"""
+Download and plot THEMIS GMAG data.
+
+Shows how to get the names of GMAG stations and how to download GMAG data
+either from a single station or gram a GMAG group.
 
 """
-File:
-    ex_gmag.py
-
-Description:
-    Basic example with THEMIS GMAG data.
-    Downloads THEMIS data from EPO GMAG stations and plots it.
-
-"""
-
 import pyspedas
 import pytplot
 
 
 def ex_gmag():
+    """Demonstrate how to use gmag functions."""
     # Delete any existing pytplot variables
     pytplot.del_data()
 
@@ -45,4 +42,4 @@ def ex_gmag():
     return 1
 
 # Run the example code
-ex_gmag()
+# ex_gmag()

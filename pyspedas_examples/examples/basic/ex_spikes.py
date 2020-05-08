@@ -1,6 +1,5 @@
-
 """
-Example of clean_spikes.
+Example of removing spikes from data.
 
 This module demonstrates how to use the function clean_spikes.
 
@@ -12,7 +11,7 @@ from pyspedas.analysis.clean_spikes import clean_spikes
 
 
 def ex_spikes():
-    """Load GMAG data and average over 5 min intervals."""
+    """Load GMAG data and show how to remove spikes."""
     # Delete any existing pytplot variables.
     pytplot.del_data()
 

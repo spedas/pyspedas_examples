@@ -1,7 +1,7 @@
 """
-Example of avg_data.
+Example of using the function avg_data.
 
-This module demonstrates how to use the function avg_data.
+Download GMAG data and average over 5 min.
 
 """
 import random
@@ -12,13 +12,13 @@ from pyspedas.analysis.avg_data import avg_data
 
 def ex_avg(plot=False):
     """Load GMAG data and average over 5 min intervals."""
-    # Delete any existing pytplot variables
+    # Delete any existing pytplot variables.
     pytplot.del_data()
 
     # Define a time rage as a list
     trange = ['2007-03-23', '2007-03-23']
 
-    # Download gmag files and load data into pytplot variables
+    # Download gmag files and load data into pytplot variables.
     sites = ['ccnv']
     var = 'thg_mag_ccnv'
     pyspedas.themis.gmag(sites=sites, trange=trange, varnames=[var])
@@ -26,8 +26,10 @@ def ex_avg(plot=False):
     pyspedas.subtract_average(var, median=1)
     var += '-m'
 
-    # Five minute average
+    # Five minute average.
     avg_data(var, width=5*60)
+
+    # Plot.
     if plot:
         pytplot.tplot([var, var + '-avg'])
 
@@ -36,7 +38,7 @@ def ex_avg(plot=False):
 
 
 def ex_avg2():
-    """Load some data and find time average.
+    """Load some random data and find the time average.
 
     The same example can be run on IDL to compare results.
     """
@@ -65,11 +67,11 @@ def ex_avg2():
     print('data after: ', d[1])
     print('first 4 results:', d[1][0:4])
 
-    # Return data for testing
+    # Return data for automated testing:
     # 1044.22 1063.034 1034.58 1054.46
 
     return d[1][0:4]
 
 
 # Run the example code
-ex_avg(True)
+# ex_avg(True)

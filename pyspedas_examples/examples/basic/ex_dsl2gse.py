@@ -1,11 +1,13 @@
 """
-    Load tha_fgl_dsl and perform a dsl to gse transformation.
+Load tha_fgl_dsl data and perform a dsl to gse transformation.
 
 Notes
 -----
-    To duplicate this example on IDL SPEDAS, run the following code:
+    To duplicate this example on IDL SPEDAS,
+    and compare the results to pyspedas,
+    run the following IDL code:
 
-    pro thm_crib_fgm4
+    pro thm_crib_fgm
 
         timespan, '2017-03-23', 1
         thm_load_state, probe='a', /get_support_data

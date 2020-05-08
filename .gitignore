@@ -131,3 +131,5 @@ dmypy.json
 # Visual Studio Code dir
 .vscode/
 .notes.txt
+tests/
+themis_data/

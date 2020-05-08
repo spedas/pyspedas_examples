@@ -1,11 +1,7 @@
-
 """
-File:
-    ex_analysis.py
+Example of using analysis functions.
 
-Description:
-    Basic example using analysis functions.
-    Download THEMIS data, subtract average, and plot it.
+Download THEMIS data, subtract average, and plot it.
 
 """
 
@@ -14,7 +10,7 @@ import pytplot
 
 
 def ex_analysis():
-
+    """Create a plot with THEMIS data."""
     # Delete any existing pytplot variables
     pytplot.del_data()
 

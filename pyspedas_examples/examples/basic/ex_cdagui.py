@@ -1,18 +1,15 @@
-
 """
-File:
-    ex_cdagui.py
+Instructions on using the cdagui for downloading data from CDAWeb.
 
-Description:
-    Example of how to use cdagui.
-    Since this is a GUI, we only print the instructions here.
-    You have to follow these instructions on a python command line,
-        for example the Spyder console in Anaconda.
+Since this is a GUI, only the instructions are printed.
+You have to follow these instructions on a python command line,
+for example the Spyder console in Anaconda.
 
 """
 
 
 def ex_cdagui():
+    """Instructions on how to use cdagui to download data."""
     # Import pyspedas
     # Run the following import command in a python command line:
     #     from pyspedas.cdagui.cdagui import cdagui

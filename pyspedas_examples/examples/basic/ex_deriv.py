@@ -1,6 +1,5 @@
-
 """
-Examples of deriv_data.
+Example of deriv_data.
 
 One example with GMAG variables, and one example with sinx variable.
 
