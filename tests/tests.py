@@ -6,18 +6,19 @@ import unittest
 class LoadTestCases(unittest.TestCase):
     """Run tests on examples."""
 
+    '''
     def test_add(self):
         """Generic test."""
         self.assertEqual(1, 1)
+    '''
 
-
-'''
     def test_load_ex_avg(self):
         """Test ex_avg."""
         from pyspedas_examples.examples.basic.ex_avg import ex_avg
         ex = ex_avg()
         self.assertEqual(ex, 1)
 
+    '''
     def test_load_ex_analysis(self):
         """Test ex_analysis."""
         from pyspedas_examples.examples.basic.ex_analysis import ex_analysis
@@ -53,7 +54,7 @@ class LoadTestCases(unittest.TestCase):
         from pyspedas_examples.examples.basic.ex_dsl2gse import ex_dsl2gse
         ex = ex_dsl2gse()
         self.assertEqual(ex, 1)
-'''
+    '''
 
 if __name__ == '__main__':
     unittest.main()
