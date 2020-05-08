@@ -1,6 +1,6 @@
 ![build_pip](https://github.com/nickssl/pyspedas_examples/workflows/build_pip/badge.svg)
 ![build_conda](https://github.com/nickssl/pyspedas_examples/workflows/build_conda/badge.svg)
-[![codecov.io](https://codecov.io/github/nickssl/pyspedas_examples/coverage.svg?branch=master)](https://codecov.io/github/nickssl/pyspedas_examples?branch=master)
+[![codecov](https://codecov.io/gh/nickssl/pyspedas_examples/branch/master/graph/badge.svg)](https://codecov.io/gh/nickssl/pyspedas_examples)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/nickssl/pyspedas_examples.svg)](https://lgtm.com/projects/g/nickssl/pyspedas_examples/context:python)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![GitHub language count](https://img.shields.io/github/languages/count/nickssl/pyspedas_examples)
