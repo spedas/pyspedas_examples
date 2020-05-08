@@ -1,11 +1,11 @@
-name: CI (pip)
+name: CI_pip
 on: [push]
 
 jobs:
   build:
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.8]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
