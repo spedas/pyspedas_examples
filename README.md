@@ -1,4 +1,4 @@
-![CI (pip)](https://github.com/nickssl/pyspedas_examples/actions/workflows/CI%20(pip)/badge.svg)
+![CI_pip](https://github.com/nickssl/pyspedas_examples/workflows/CI_pip/badge.svg)
 
 # PySPEDAS Examples
 
