@@ -16,7 +16,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip flake8
           pip install -r requirements.txt
           # pip install -r requirements-dev.txt
           # install black if available (Python 3.6 and above), and autopep8 for testing the pipe mode
