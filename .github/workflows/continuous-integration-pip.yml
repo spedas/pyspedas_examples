@@ -35,4 +35,4 @@ jobs:
       - name: Install from source (required for the pre-commit tests)
         run: pip install .
       - name: Test with pytest
-        run: coverage run --source=. -m pyspedas_examples.tests
+        run: coverage run --source=. -m pyspedas_examples.tests.tests.py
