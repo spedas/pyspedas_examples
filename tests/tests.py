@@ -18,13 +18,13 @@ class LoadTestCases(unittest.TestCase):
         ex = ex_avg()
         self.assertEqual(ex, 1)
 
-    '''
     def test_load_ex_analysis(self):
         """Test ex_analysis."""
         from pyspedas_examples.examples.basic.ex_analysis import ex_analysis
         ex = ex_analysis()
         self.assertEqual(ex, 1)
 
+    '''
     def test_load_ex_basic(self):
         """Test ex_basic."""
         from pyspedas_examples.examples.basic.ex_basic import ex_basic
@@ -55,6 +55,7 @@ class LoadTestCases(unittest.TestCase):
         ex = ex_dsl2gse()
         self.assertEqual(ex, 1)
     '''
+
 
 if __name__ == '__main__':
     unittest.main()
