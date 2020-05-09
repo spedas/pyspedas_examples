@@ -27,4 +27,6 @@ dependencies:
   - twine
   - pandoc
   - myst-parser
+  - numpy
+  - xarray
   - pyspedas
