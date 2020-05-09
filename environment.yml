@@ -1,0 +1,29 @@
+name: pyspedas_examples
+channels:
+  - default
+  - conda-forge
+dependencies:
+  - python
+  - jupyter
+  - jupyterlab
+  - pyyaml
+  - nbconvert
+  - jupyter_contrib_nbextensions
+  - pytest
+  - pytest-xdist
+  - pytest-cov
+  - codecov
+  - pre-commit
+  - pylint
+  - flake8
+  - black
+  - autopep8
+  - sphinx-gallery
+  - nodejs<13
+  - yarn
+  - pip
+  - setuptools
+  - twine
+  - pandoc
+  - myst-parser
+  - pyspedas
