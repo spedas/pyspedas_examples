@@ -1,9 +1,9 @@
-![build](https://github.com/nickssl/pyspedas_examples/workflows/build/badge.svg)
-[![codecov](https://codecov.io/gh/nickssl/pyspedas_examples/branch/master/graph/badge.svg)](https://codecov.io/gh/nickssl/pyspedas_examples)
+![build](https://github.com/spedas/pyspedas_examples/workflows/build/badge.svg)
+[![codecov](https://codecov.io/gh/spedas/pyspedas_examples/branch/master/graph/badge.svg)](https://codecov.io/gh/spedas/pyspedas_examples)
 ![PyPI](https://img.shields.io/pypi/v/pyspedas-examples)
 ![Conda](https://img.shields.io/conda/v/spedas/pyspedas_examples)
-![GitHub](https://img.shields.io/github/license/nickssl/pyspedas_examples)
-![GitHub language count](https://img.shields.io/github/languages/count/nickssl/pyspedas_examples)
+![GitHub](https://img.shields.io/github/license/spedas/pyspedas_examples)
+![GitHub language count](https://img.shields.io/github/languages/count/spedas/pyspedas_examples)
 
 # PySPEDAS Examples
 
