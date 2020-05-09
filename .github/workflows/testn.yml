@@ -21,3 +21,6 @@ jobs:
       - name: Conda list
         shell: pwsh
         run: conda list
+      - name: Conda install
+        shell: pwsh
+        run: conda install .
