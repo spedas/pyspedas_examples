@@ -7,7 +7,7 @@ from codecs import open
 
 setup(
     name='pyspedas_examples',
-    version='0.1.4',
+    version='0.1.5',
     description='Examples of pySPEDAS',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
