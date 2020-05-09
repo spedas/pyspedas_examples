@@ -26,11 +26,11 @@ jobs:
       shell: pwsh
       run: |
         # stop the build if there are Python syntax errors or undefined names
-        $HOME/miniconda/bin/flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # all Python files should follow PEP8 (except some notebooks, see setup.cfg)
-        $HOME/miniconda/bin/flake8 jupytext tests
+        flake8 jupytext tests
         # exit-zero treats all errors as warnings.  The GitHub editor is 127 chars wide
-        $HOME/miniconda/bin/flake8 . --count --exit-zero --max-complexity=10 --statistics
+        flake8 . --count --exit-zero --max-complexity=10 --statistics
     - name: Install from source (required for the pre-commit tests)
       shell: pwsh
       run: $HOME/miniconda/bin/conda install .
