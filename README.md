@@ -5,7 +5,7 @@
 
 # PySPEDAS Examples
 
-This project contains examples and turorials of using pySPEDAS.
+This project contains examples and turorials of pySPEDAS.
 
 
 ## Installation
