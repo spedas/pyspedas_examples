@@ -20,7 +20,7 @@ class LoadTestCases(unittest.TestCase):
     def test_load_ex_avg(self):
         """Test ex_avg."""
         from pyspedas_examples.examples.basic.ex_avg import ex_avg
-        ex = ex_avg(plot=True)
+        ex = ex_avg()
         self.assertEqual(ex, 1)
 
     def test_load_ex_avg2(self):
@@ -32,13 +32,13 @@ class LoadTestCases(unittest.TestCase):
     def test_load_ex_analysis(self):
         """Test ex_analysis."""
         from pyspedas_examples.examples.basic.ex_analysis import ex_analysis
-        ex = ex_analysis(plot=False)
+        ex = ex_analysis()
         self.assertEqual(ex, 1)
 
     def test_load_ex_basic(self):
         """Test ex_basic."""
         from pyspedas_examples.examples.basic.ex_basic import ex_basic
-        ex = ex_basic(plot=False)
+        ex = ex_basic()
         self.assertEqual(ex, 1)
 
     def test_load_ex_cdagui(self):
@@ -56,7 +56,7 @@ class LoadTestCases(unittest.TestCase):
     def test_load_ex_spectra(self):
         """Test ex_spectra."""
         from pyspedas_examples.examples.basic.ex_spectra import ex_spectra
-        ex = ex_spectra(plot=False)
+        ex = ex_spectra()
         self.assertEqual(ex, 1)
 
     ''' # Fails
