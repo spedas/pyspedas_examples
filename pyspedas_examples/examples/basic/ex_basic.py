@@ -9,7 +9,7 @@ import pyspedas
 import pytplot
 
 
-def ex_basic():
+def ex_basic(plot=True):
     """Download and plot THEMIS data."""
     # Delete any existing pytplot variables
     pytplot.del_data()
@@ -38,7 +38,8 @@ def ex_basic():
     pytplot.options('tha_vel', 'ytitle', 'Velocity')
 
     # Plot position and velocity using the pyqtgraph library (default)
-    pytplot.tplot(["tha_pos", "tha_position", "tha_vel"])
+    if plot:
+        pytplot.tplot(["tha_pos", "tha_position", "tha_vel"])
 
     # Plot position and velocity using the bokeh library
     # pytplot.tplot(["tha_pos", "tha_position", "tha_vel"], bokeh=True)

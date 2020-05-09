@@ -9,7 +9,7 @@ import pyspedas
 import pytplot
 
 
-def ex_analysis():
+def ex_analysis(plot=True):
     """Create a plot with THEMIS data."""
     # Delete any existing pytplot variables
     pytplot.del_data()
@@ -23,7 +23,8 @@ def ex_analysis():
     pyspedas.subtract_median('tha_pos')
 
     # Plot
-    pytplot.tplot(["tha_pos", "tha_pos-d", "tha_pos-m"])
+    if plot:
+        pytplot.tplot(["tha_pos", "tha_pos-d", "tha_pos-m"])
 
     # Return 1 as indication that the example finished without problems.
     return 1

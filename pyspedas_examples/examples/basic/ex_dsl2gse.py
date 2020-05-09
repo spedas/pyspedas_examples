@@ -32,7 +32,7 @@ import pytplot
 from pyspedas.themis.cotrans.dsl2gse import dsl2gse
 
 
-def ex_dsl2gse():
+def ex_dsl2gse(plot=True):
     """Run dsl2gse."""
     time_range = ['2017-03-23 00:00:00', '2017-03-23 23:59:59']
     pyspedas.themis.state(probe='a', trange=time_range, get_support_data=True,
@@ -49,7 +49,8 @@ def ex_dsl2gse():
 
     # Plot
     pytplot.tplot_options('title', 'tha_fgl DSL and GSE, 2017-03-23')
-    pytplot.tplot(['tha_fgl_dsl', 'tha_fgl_gse', 'z_dsl', 'z_gse'])
+    if plot:
+        pytplot.tplot(['tha_fgl_dsl', 'tha_fgl_gse', 'z_dsl', 'z_gse'])
 
     # Return 1 as indication that the example finished without problems.
     return 1

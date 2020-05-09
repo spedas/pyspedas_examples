@@ -10,7 +10,7 @@ import pyspedas
 from pyspedas.analysis.deriv_data import deriv_data
 
 
-def ex_deriv():
+def ex_deriv(plot=True):
     """Find the derivative of a GMAG variable."""
     # Derivative of data
     pytplot.del_data()
@@ -30,7 +30,8 @@ def ex_deriv():
     deriv_data(var)
     # pytplot.options(var, 'ytitle', var)
     # pytplot.options(var + '-der', 'ytitle', var + '-der')
-    pytplot.tplot([var, var + '-der'])
+    if plot:
+        pytplot.tplot([var, var + '-der'])
 
     # Return 1 as indication that the example finished without problems.
     return 1

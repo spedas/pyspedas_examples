@@ -10,7 +10,7 @@ import pyspedas
 from pyspedas.analysis.clean_spikes import clean_spikes
 
 
-def ex_spikes():
+def ex_spikes(plot=True):
     """Load GMAG data and show how to remove spikes."""
     # Delete any existing pytplot variables.
     pytplot.del_data()
@@ -40,7 +40,8 @@ def ex_spikes():
     clean_spikes(var, sub_avg=True)
 
     # Plot all variables.
-    pytplot.tplot(pytplot.tplot_names())
+    if plot:
+        pytplot.tplot(pytplot.tplot_names())
 
     # Return 1 as indication that the example finished without problems.
     return 1

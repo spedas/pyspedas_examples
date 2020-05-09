@@ -6,7 +6,7 @@ from pyspedas import time_float
 from pyspedas.analysis.wavelet import wavelet
 
 
-def ex_wavelet():
+def ex_wavelet(plot=True):
     """Demonstrates how to use wavelets with pyspedas."""
     # Delete any existing pytplot variables
     pytplot.del_data()
@@ -31,7 +31,9 @@ def ex_wavelet():
     pytplot.options(pvar, 'ylog', True)
     pytplot.options(pvar, 'ytitle', pvar)
     pytplot.ylim(pvar, 0.001, 1.0)
-    pytplot.tplot([var, pvar])
+
+    if plot:
+        pytplot.tplot([var, pvar])
 
     return 1
 

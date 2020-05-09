@@ -9,7 +9,7 @@ import pytplot
 from pyspedas.analysis.tsmooth import tsmooth
 
 
-def ex_test_smooth():
+def ex_test_smooth(plot=True):
     """Smooth data."""
     t = [1., 2., 3., 4., 5., 6., 7., 8., 9., 10., 11., 12.]
     y = [3., 5., 8., 15., 20., 1., 2., 3., 4., 5., 6., 4.]
@@ -17,7 +17,8 @@ def ex_test_smooth():
     pytplot.store_data('original', data={'x': t, 'y': y})
     tsmooth('original', width=5, new_names='smooth', preserve_nans=1)
 
-    pytplot.tplot(['original', 'smooth'])
+    if plot:
+        pytplot.tplot(['original', 'smooth'])
 
     d0 = pytplot.get_data('original')
     print('Original data: ', d0[1])

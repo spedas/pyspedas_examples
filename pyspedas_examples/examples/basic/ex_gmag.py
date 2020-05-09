@@ -9,7 +9,7 @@ import pyspedas
 import pytplot
 
 
-def ex_gmag():
+def ex_gmag(plot=True):
     """Demonstrate how to use gmag functions."""
     # Delete any existing pytplot variables
     pytplot.del_data()
@@ -36,7 +36,9 @@ def ex_gmag():
     # Plot
     sites_loaded = pyspedas.tplot_names()
     pytplot.tplot_options('title', 'EPO GMAG 2015-12-31')
-    pytplot.tplot(sites_loaded)
+
+    if plot:
+        pytplot.tplot(sites_loaded)
 
     # Return 1 as indication that the example finished without problems.
     return 1

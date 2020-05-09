@@ -10,7 +10,7 @@ import numpy
 from pyspedas.utilities.time_double import time_float
 
 
-def ex_create():
+def ex_create(plot=True):
     """Show how to create and plot pytplot variables."""
     # Delete any existing pytplot variables
     pytplot.del_data()
@@ -43,8 +43,10 @@ def ex_create():
     pytplot.ylim('sinx-clip-deflag', -1100.0, 1100.0)
     pytplot.ylim('sinx-clip-deflag-itrp', -1100.0, 1100.0)
     pytplot.tplot_options('title', 'Interpolation example')
-    pytplot.tplot(['sinx', 'sinx-clip', 'sinx-clip-deflag',
-                   'sinx-clip-deflag-itrp'])
+
+    if plot:
+        pytplot.tplot(['sinx', 'sinx-clip', 'sinx-clip-deflag',
+                       'sinx-clip-deflag-itrp'])
 
     # Return 1 as indication that the example finished without problems.
     return 1

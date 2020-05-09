@@ -10,7 +10,7 @@ import pyspedas
 import pytplot
 
 
-def ex_spectra():
+def ex_spectra(plot=True):
     """Download THEMIS data and create a plot."""
     # Delete any existing pytplot variables
     pytplot.del_data()
@@ -30,7 +30,8 @@ def ex_spectra():
     pytplot.tplot_options('title', 'tha 2015-12-31')
 
     # Plot line and spectrogram
-    pytplot.tplot(['tha_pos', 'tha_psif_en_eflux'])
+    if plot:
+        pytplot.tplot(['tha_pos', 'tha_psif_en_eflux'])
 
     # Return 1 as indication that the example finished without problems.
     return 1

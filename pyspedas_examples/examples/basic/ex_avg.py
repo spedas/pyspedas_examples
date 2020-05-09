@@ -10,7 +10,7 @@ import pyspedas
 from pyspedas.analysis.avg_data import avg_data
 
 
-def ex_avg(plot=False):
+def ex_avg(plot=True):
     """Load GMAG data and average over 5 min intervals."""
     # Delete any existing pytplot variables.
     pytplot.del_data()
