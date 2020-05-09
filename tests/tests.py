@@ -23,6 +23,12 @@ class LoadTestCases(unittest.TestCase):
         ex = ex_avg(plot=False)
         self.assertEqual(ex, 1)
 
+    def test_load_ex_avg2(self):
+        """Test ex_avg."""
+        from pyspedas_examples.examples.basic.ex_avg import ex_avg2
+        ex = ex_avg2()
+        self.assertAlmostEqual(ex[0], 1044.22)
+
     def test_load_ex_analysis(self):
         """Test ex_analysis."""
         from pyspedas_examples.examples.basic.ex_analysis import ex_analysis
