@@ -2,6 +2,7 @@ name: pyspedas_examples
 channels:
   - default
   - conda-forge
+  - spedas
 dependencies:
   - python
   - jupyter
