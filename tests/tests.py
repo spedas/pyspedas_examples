@@ -20,7 +20,7 @@ class LoadTestCases(unittest.TestCase):
     def test_load_ex_avg(self):
         """Test ex_avg."""
         from pyspedas_examples.examples.basic.ex_avg import ex_avg
-        ex = ex_avg(plot=False)
+        ex = ex_avg(plot=True)
         self.assertEqual(ex, 1)
 
     def test_load_ex_avg2(self):
