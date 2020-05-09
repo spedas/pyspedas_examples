@@ -1,13 +1,5 @@
 name: "Example 1: Basic usage"
-
-on:
-  pull_request:
-    branches:
-    - '*'
-  push:
-    branches:
-    - '1.x'
-    - 'master'
+on: [push]
 
 jobs:
   example-1:
