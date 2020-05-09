@@ -31,7 +31,7 @@ jobs:
         # exit-zero treats all errors as warnings.  The GitHub editor is 127 chars wide
         # flake8 . --count --exit-zero --max-complexity=10 --statistics
     - name: Install from source (required for the pre-commit tests)
-      run: $HOME/miniconda/bin/conda install .
+      # run: $HOME/miniconda/bin/conda install .
     - name: Test with pytest
       run: $HOME/miniconda/bin/coverage run --source=. -m tests.tests
     - name: Upload coverage to Codecov
