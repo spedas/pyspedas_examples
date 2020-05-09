@@ -57,4 +57,4 @@ def ex_dsl2gse(plot=True):
 
 
 # Run the example code
-ex_dsl2gse()
+# ex_dsl2gse()
