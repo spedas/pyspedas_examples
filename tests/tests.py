@@ -59,6 +59,12 @@ class LoadTestCases(unittest.TestCase):
         ex = ex_deriv()
         self.assertEqual(ex, 1)
 
+    def test_ex_deriv2(self):
+        """Test ex_basic."""
+        from pyspedas_examples.examples.ex_deriv import ex_deriv2
+        ex = ex_deriv2()
+        self.assertEqual(ex, 1)
+
     def test_ex_dsl2gse(self):
         """Test ex_dsl2gse."""
         from pyspedas_examples.examples.ex_dsl2gse import ex_dsl2gse
