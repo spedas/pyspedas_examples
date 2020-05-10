@@ -89,13 +89,11 @@ class LoadTestCases(unittest.TestCase):
         ex = ex_spikes()
         self.assertEqual(ex, 1)
 
-    '''
     def test_ex_wavelet(self):
         """Test ex_spectra."""
         from pyspedas_examples.examples.ex_wavelet import ex_wavelet
         ex = ex_wavelet()
         self.assertEqual(ex, 1)
-    '''
 
 
 if __name__ == '__main__':
