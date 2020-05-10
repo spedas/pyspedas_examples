@@ -7,7 +7,7 @@
 
 # pySPEDAS Examples
 
-This project contains examples and turorials of pySPEDAS.
+This project contains examples and turorials for pySPEDAS.
 
 pySPEDAS is a python version of the Space Physics Environment Data Analysis Software ([SPEDAS](http://spedas.org/wiki)) framework.
 
