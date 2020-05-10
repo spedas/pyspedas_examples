@@ -30,8 +30,7 @@ pip install pyspedas_examples
 You can verify that the installation works, using:
 
 ```
-import pyspedas_examples
-from pyspedas_examples.ex_basic import ex_basic
+from pyspedas_examples.examples.ex_basic import ex_basic
 ex_basic()
 ```
 
