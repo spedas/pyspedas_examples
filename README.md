@@ -5,7 +5,7 @@
 ![GitHub](https://img.shields.io/github/license/spedas/pyspedas_examples)
 ![GitHub language count](https://img.shields.io/github/languages/count/spedas/pyspedas_examples)
 
-# PySPEDAS Examples
+# pySPEDAS Examples
 
 This project contains examples and turorials of pySPEDAS.
 
@@ -14,7 +14,7 @@ pySPEDAS is a python version of the Space Physics Environment Data Analysis Soft
 
 ## Installation
 
-You can install pyspedas_examples either using conda or using pip:
+You can install pyspedas_examples using either conda or pip:
 
 ```
 conda install -c spedas pyspedas_examples
