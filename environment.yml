@@ -20,7 +20,7 @@ dependencies:
   - black
   - autopep8
   - sphinx-gallery
-  - nodejs<13
+  - nodejs
   - yarn
   - pip
   - setuptools
