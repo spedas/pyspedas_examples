@@ -26,12 +26,15 @@ def ex_avg(plot=True):
     pyspedas.subtract_average(var, median=1)
     var += '-m'
 
-    # Five minute average.
-    avg_data(var, width=5*60)
+    # Five minute average using time dt.
+    avg_data(var, dt=5*60.)    
+    # Five minute average using width (number of measurements). 
+    # Each measurement is 0.5 sec. 
+    avg_data(var, width=5*60.*2., new_names=var + '-avg2')
 
     # Plot.
     if plot:
-        pytplot.tplot([var, var + '-avg'])
+        pytplot.tplot([var, var + '-avg', var + '-avg2'])
 
     # Return 1 as indication that the example finished without problems.
     return 1
