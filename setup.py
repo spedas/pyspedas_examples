@@ -7,7 +7,7 @@ from codecs import open
 
 setup(
     name='pyspedas_examples',
-    version='0.1.7',
+    version='0.1.8',
     description='Examples of pySPEDAS',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -25,7 +25,7 @@ setup(
     project_urls={'Information': 'http://spedas.org/wiki/',
                   },
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
-    install_requires=['pyspedas>=0.9.31'],
+    install_requires=['pyspedas>=1.0.6'],
     python_requires='>=3.5',
     include_package_data=True,
 )
