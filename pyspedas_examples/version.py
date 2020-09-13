@@ -14,3 +14,5 @@ def version():
     print("pyspedas_examples version: " + ver)
     verp = pkg_resources.get_distribution("pyspedas").version
     print("pyspedas version: " + verp)
+    verp = pkg_resources.get_distribution("pytplot").version
+    print("pytplot version: " + verp)
