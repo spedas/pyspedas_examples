@@ -1,1 +1,1 @@
-from pyspedas_examples.pyspedas_examples.version import version
+from .version import version
