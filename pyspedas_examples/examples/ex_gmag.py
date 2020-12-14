@@ -34,7 +34,7 @@ def ex_gmag(plot=True):
     pyspedas.themis.gmag(sites='idx', trange=trange)
 
     # Plot
-    sites_loaded = pyspedas.tplot_names()
+    sites_loaded = pytplot.tplot_names()
     pytplot.tplot_options('title', 'EPO GMAG 2015-12-31')
 
     if plot:
