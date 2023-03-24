@@ -27,9 +27,9 @@ def ex_avg(plot=True):
     var += '-m'
 
     # Five minute average using time dt.
-    avg_data(var, dt=5*60.)    
-    # Five minute average using width (number of measurements). 
-    # Each measurement is 0.5 sec. 
+    avg_data(var, res=5*60.)
+    # Five minute average using width (number of measurements).
+    # Each measurement is 0.5 sec.
     avg_data(var, width=5*60.*2., new_names=var + '-avg2')
 
     # Plot.
@@ -64,7 +64,7 @@ def ex_avg2():
     print('time before: ', d0[0])
     print('data before: ', d0[1])
 
-    avg_data('test', 5)
+    avg_data('test', width=5)
     d = pytplot.get_data('test-avg')
     print('time after: ', d[0])
     print('data after: ', d[1])
@@ -77,4 +77,4 @@ def ex_avg2():
 
 
 # Run the example code
-# ex_avg(True)
+ex_avg2()
