@@ -28,7 +28,7 @@ def ex_cdagui():
     print("--- Select 'THB_L2_FIT' and click '2. Get File List'.")
     # Select the filename, unselect 'Download Only'
     # and click the button '3. Get Data'
-    print("--- Select the filename, unselect 'Download Only'\
+    print("--- Select the proper filename, unselect 'Download Only'\
  and click '3. Get Data'.")
     # Click 'Exit' to close the GUI
     print("--- Click 'Exit' to close the GUI.")
@@ -45,10 +45,6 @@ def ex_cdagui():
     #   pytplot.tplot('thb_fgs_dsl')
     print("--- Type the following to create a plot:")
     print("pytplot.tplot('thb_fgs_dsl')")
-    # Remind the user about needing PyQt5
-    print()
-    print("--- If you encounter problems, try to install the latest PyQt5:")
-    print("pip install PyQt5 --upgrade")
 
     # Return 1 as indication that the example finished without problems.
     return 1
