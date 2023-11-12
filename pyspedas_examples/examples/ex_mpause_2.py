@@ -40,4 +40,4 @@ def ex_mpause_2():
 
 
 # To run this function, uncomment the following line:
-ex_mpause_2()
+# ex_mpause_2()
