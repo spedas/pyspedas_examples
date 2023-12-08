@@ -10,7 +10,11 @@ Returns
 def version():
     """Versions of main packages."""
     import pkg_resources
-    ver = pkg_resources.get_distribution("pyspedas_examples").version
+    try:
+        ver = pkg_resources.get_distribution("pyspedas_examples").version
+    except pkg_resources.DistributionNotFound:
+        print("pyspedas_examples is not installed as a package, version info not available")
+        return False
     print("pyspedas_examples version: " + ver)
     verp = pkg_resources.get_distribution("pyspedas").version
     print("pyspedas version: " + verp)
