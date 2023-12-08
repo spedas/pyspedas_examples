@@ -29,5 +29,7 @@ def ex_analysis(plot=True):
     # Return 1 as indication that the example finished without problems.
     return 1
 
+if __name__ == '__main__':
+    ex_analysis()
 # Run the example code
 # ex_analysis()
