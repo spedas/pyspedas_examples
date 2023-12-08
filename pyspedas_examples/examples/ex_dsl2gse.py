@@ -39,7 +39,7 @@ def ex_dsl2gse(plot=True):
                           varnames=['tha_spinras', 'tha_spindec'])
     pyspedas.themis.fgm(probe='a', trange=time_range, varnames=['tha_fgl_dsl'])
 
-    dsl2gse('tha_fgl_dsl', 'tha_spinras', 'tha_spindec', 'tha_fgl_gse')
+    dsl2gse('tha_fgl_dsl', 'tha_fgl_gse')
 
     # Get the third component only
     d_in = pytplot.get_data('tha_fgl_dsl')
