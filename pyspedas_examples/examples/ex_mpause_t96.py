@@ -6,11 +6,10 @@ calls the mpause_t96 function with the position data, and plots the magnetopause
 This is similar to the IDL example crib_magnetopause.pro (second part).
 """
 
-from pyspedas.themis import state
-from pyspedas.cotrans.cotrans import cotrans
-from pyspedas.utilities.mpause_t96 import mpause_t96
 import matplotlib.pyplot as plt
 from pytplot import get_data
+from pyspedas.themis import state
+from pyspedas import cotrans, mpause_t96
 
 
 def ex_mpause_t96():
@@ -50,5 +49,7 @@ def ex_mpause_t96():
     plt.grid(True)
     plt.show()
 
-# To run this function, uncomment the following line:
-# ex_mpause_t96()
+
+# Run the example code
+if __name__ == '__main__':
+    ex_mpause_t96()
