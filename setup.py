@@ -12,7 +12,7 @@ setup(
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/spedas/pyspedas_examples',
-    author='Jim Lewis'
+    author='Jim Lewis',
     author_email='jwl@ssl.berkeley.edu',
     license='MIT',
     classifiers=['Development Status :: 4 - Beta',
