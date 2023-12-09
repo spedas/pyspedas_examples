@@ -6,7 +6,7 @@ This is similar to the IDL example crib_magnetopause.pro (first part).
 """
 
 import matplotlib.pyplot as plt
-from pyspedas.utilities.mpause_2 import mpause_2
+from pyspedas import mpause_2
 
 
 def ex_mpause_2():
@@ -39,5 +39,6 @@ def ex_mpause_2():
     plt.show()
 
 
-# To run this function, uncomment the following line:
-# ex_mpause_2()
+# Run the example code
+if __name__ == '__main__':
+    ex_mpause_2()
