@@ -3,10 +3,10 @@
 See also: http://spedas.org/wiki/index.php?title=Cotrans
 """
 
-import pyspedas
-import pytplot
-from pyspedas.utilities.cotrans import cotrans
-from pyspedas.utilities.cotrans_lib import submag2geo
+from pytplot import options,   tplot_options, tplot
+from pyspedas import cotrans
+from pyspedas.cotrans.cotrans_lib import submag2geo
+from pyspedas.themis import state
 
 
 def ex_cotrans():
@@ -25,20 +25,24 @@ def ex_cotrans():
     pos_out = "tha_pos_gse"
     vel_in = "tha_vel"
     vel_out = "tha_vel_gse"
-    pyspedas.themis.state(probe=probe, trange=trange, time_clip=True,
-                          varnames=[pos_in, vel_in])
+    state(probe=probe, trange=trange, time_clip=True,
+          varnames=[pos_in, vel_in])
 
     # Coordinate transformation.
     cotrans(name_in=pos_in, name_out=pos_out, coord_in="gei", coord_out="gse")
     cotrans(name_in=vel_in, name_out=vel_out, coord_in="gei", coord_out="gse")
 
     # Plot.
-    pytplot.tplot_options('title', 'Themis pos and vel in GEI and GSE')
-    pytplot.options(pos_in, 'ytitle', pos_in)
-    pytplot.options(pos_out, 'ytitle', pos_out)
-    pytplot.options(vel_in, 'ytitle', vel_in)
-    pytplot.options(vel_out, 'ytitle', vel_out)
-    pytplot.tplot([pos_in, vel_in, pos_out, vel_out])
+    tplot_options('title', 'Themis pos and vel in GEI and GSE')
+    options(pos_in, 'ytitle', pos_in)
+    options(pos_in, 'legend_names', ["x, GEI", "y, GEI", "z, GEI"])
+    options(pos_out, 'ytitle', pos_out)
+    options(pos_out, 'legend_names', ["x, GSE", "y, GSE", "z, GSE"])
+    options(vel_in, 'ytitle', vel_in)
+    options(vel_in, 'legend_names', ["Vx, GEI", "Vy, GEI", "Vz, GEI"])
+    options(vel_out, 'ytitle', vel_out)
+    options(vel_out, 'legend_names', ["Vx, GSE", "Vy, GSE", "Vz, GSE"])
+    tplot([pos_in, vel_in, pos_out, vel_out])
 
     # Return 1 as indication that the example finished without problems.
     return 1
@@ -78,4 +82,6 @@ def ex_cotrans1():
 
 
 # Run the example code
-# ex_cotrans()
+if __name__ == '__main__':
+    ex_cotrans()
+    ex_cotrans1()

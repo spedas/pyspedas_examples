@@ -37,6 +37,12 @@ def version():
         print(
             "pytplot (original) is not installed as a package, version info not available")
 
+    try:
+        vero = pkg_resources.get_distribution("cdasws").version
+        print("cdasws version: " + vero)
+    except pkg_resources.DistributionNotFound:
+        print("cdasws is not installed as a package, version info not available")
+
 
 # Run the version function directly
 if __name__ == '__main__':

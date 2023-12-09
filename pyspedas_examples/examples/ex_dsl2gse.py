@@ -57,4 +57,5 @@ def ex_dsl2gse(plot=True):
 
 
 # Run the example code
-# ex_dsl2gse()
+if __name__ == '__main__':
+    ex_dsl2gse()

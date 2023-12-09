@@ -27,11 +27,6 @@ def ex_wavelet(plot=True):
     pvar = powervar[0]
 
     # Plot.
-    pytplot.options(pvar, 'colormap', 'jet')
-    pytplot.options(pvar, 'ylog', True)
-    pytplot.options(pvar, 'ytitle', pvar)
-    pytplot.ylim(pvar, 0.001, 1.0)
-
     if plot:
         pytplot.tplot([var, pvar])
 
@@ -39,4 +34,5 @@ def ex_wavelet(plot=True):
 
 
 # Run the example code
-# ex_wavelet()
+if __name__ == '__main__':
+    ex_wavelet()

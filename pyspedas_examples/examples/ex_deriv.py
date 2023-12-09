@@ -37,7 +37,7 @@ def ex_deriv(plot=True):
     return 1
 
 
-def ex_deriv2(plot=True):
+def ex_deriv1(plot=True):
     """Find the derivative of sinx."""
     # Delete any existing pytplot variables
     pytplot.del_data()
@@ -64,4 +64,6 @@ def ex_deriv2(plot=True):
 
 
 # Run the example code
-# ex_deriv()
+if __name__ == '__main__':
+    ex_deriv()
+    ex_deriv1()

@@ -5,31 +5,31 @@ Download THEMIS data, subtract average, and plot it.
 
 """
 
-import pyspedas
-import pytplot
+from pytplot import del_data, subtract_average, subtract_median, tplot
+from pyspedas.themis import state
 
 
 def ex_analysis(plot=True):
     """Create a plot with THEMIS data."""
     # Delete any existing pytplot variables
-    pytplot.del_data()
+    del_data()
 
     # Download THEMIS state data for 2015-12-31
     time_range = ['2015-12-31 00:00:00', '2015-12-31 23:59:59']
-    pyspedas.themis.state(probe='a', trange=time_range)
+    state(probe='a', trange=time_range)
 
     # Use some analysis functions on tplot variables
-    pyspedas.subtract_average('tha_pos')
-    pyspedas.subtract_median('tha_pos')
+    subtract_average('tha_pos')
+    subtract_median('tha_pos')
 
     # Plot
     if plot:
-        pytplot.tplot(["tha_pos", "tha_pos-d", "tha_pos-m"])
+        tplot(["tha_pos", "tha_pos-d", "tha_pos-m"])
 
     # Return 1 as indication that the example finished without problems.
     return 1
 
+
+# Run the example code
 if __name__ == '__main__':
     ex_analysis()
-# Run the example code
-# ex_analysis()

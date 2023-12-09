@@ -21,6 +21,7 @@ def ex_basic(plot=True):
     alldata = get_data("tha_pos")
     time = alldata[0]
     data = alldata[1]
+
     # Here we could work on the data before saving a new tplot variable.
     # For example, we could convert the data to km:
     data = data / 1000.0
