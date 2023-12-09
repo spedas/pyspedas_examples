@@ -6,14 +6,14 @@ This module demonstrates how to use the function clean_spikes.
 """
 import random
 import pytplot
-import pyspedas
-from pyspedas.analysis.clean_spikes import clean_spikes
+from pytplot import clean_spikes, del_data, tplot_options, data_quants, tplot, tplot_names
+from pyspedas.themis import gmag
 
 
 def ex_spikes(plot=True):
     """Load GMAG data and show how to remove spikes."""
     # Delete any existing pytplot variables.
-    pytplot.del_data()
+    del_data()
 
     # Define a time rage as a list
     trange = ['2007-03-23', '2007-03-23']
@@ -21,8 +21,8 @@ def ex_spikes(plot=True):
     # Download gmag files and load data into pytplot variables.
     sites = ['ccnv']
     var = 'thg_mag_ccnv'
-    pyspedas.themis.gmag(sites=sites, trange=trange, varnames=[var])
-    pytplot.tplot_options('title', 'GMAG data, thg_mag_ccnv 2007-03-23')
+    gmag(sites=sites, trange=trange, varnames=[var])
+    tplot_options('title', 'GMAG data, thg_mag_ccnv, 2007-03-23')
 
     # Add spikes to data.
     data = pytplot.data_quants[var].values
@@ -41,11 +41,12 @@ def ex_spikes(plot=True):
 
     # Plot all variables.
     if plot:
-        pytplot.tplot(pytplot.tplot_names())
+        tplot(tplot_names())
 
     # Return 1 as indication that the example finished without problems.
     return 1
 
 
-# Run the example code:
-# ex_spikes()
+# Run the example code
+if __name__ == '__main__':
+    ex_spikes()

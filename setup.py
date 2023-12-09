@@ -7,13 +7,13 @@ from codecs import open
 
 setup(
     name='pyspedas_examples',
-    version='0.2.0',
+    version='0.3.0',
     description='Examples of pySPEDAS',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/spedas/pyspedas_examples',
-    author='Nick Hatzigeorgiu, Eric Grimes',
-    author_email='nikos@berkeley.edu, egrimes@igpp.ucla.edu',
+    author='Jim Lewis',
+    author_email='jwl@ssl.berkeley.edu',
     license='MIT',
     classifiers=['Development Status :: 4 - Beta',
                  'Intended Audience :: Science/Research',
@@ -25,7 +25,7 @@ setup(
     project_urls={'Information': 'http://spedas.org/wiki/',
                   },
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
-    install_requires=['pyspedas>=1.1.2'],
-    python_requires='>=3.5',
+    install_requires=['pyspedas>=1.5.1'],
+    python_requires='>=3.8',
     include_package_data=True,
 )

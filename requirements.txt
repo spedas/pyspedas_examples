@@ -1,1 +1,1 @@
-pyspedas>=1.1.2
+pyspedas>=1.5.1

@@ -5,15 +5,15 @@ Download GMAG data and average over 5 min.
 
 """
 import random
-import pytplot
-import pyspedas
-from pyspedas.analysis.avg_data import avg_data
+from pytplot import del_data, get_data, store_data, tplot_options, tplot, subtract_average
+from pyspedas import avg_data
+from pyspedas.themis import gmag
 
 
 def ex_avg(plot=True):
     """Load GMAG data and average over 5 min intervals."""
     # Delete any existing pytplot variables.
-    pytplot.del_data()
+    del_data()
 
     # Define a time rage as a list
     trange = ['2007-03-23', '2007-03-23']
@@ -21,9 +21,9 @@ def ex_avg(plot=True):
     # Download gmag files and load data into pytplot variables.
     sites = ['ccnv']
     var = 'thg_mag_ccnv'
-    pyspedas.themis.gmag(sites=sites, trange=trange, varnames=[var])
-    pytplot.tplot_options('title', 'GMAG data, thg_mag_ccnv 2007-03-23')
-    pyspedas.subtract_average(var, median=1)
+    gmag(sites=sites, trange=trange, varnames=[var])
+    tplot_options('title', 'GMAG data, thg_mag_ccnv, 2007-03-23')
+    subtract_average(var, median=1)
     var += '-m'
 
     # Five minute average using time dt.
@@ -34,7 +34,7 @@ def ex_avg(plot=True):
 
     # Plot.
     if plot:
-        pytplot.tplot([var, var + '-avg', var + '-avg2'])
+        tplot([var, var + '-avg', var + '-avg2'])
 
     # Return 1 as indication that the example finished without problems.
     return 1
@@ -59,22 +59,22 @@ def ex_avg2():
         print(yi)
 
     print("y: ", str(y[0:4]))
-    pytplot.store_data('test', data={'x': t, 'y': y})
-    d0 = pytplot.get_data('test')
+    store_data('test', data={'x': t, 'y': y})
+    d0 = get_data('test')
     print('time before: ', d0[0])
     print('data before: ', d0[1])
 
     avg_data('test', width=5)
-    d = pytplot.get_data('test-avg')
+    d = get_data('test-avg')
     print('time after: ', d[0])
     print('data after: ', d[1])
     print('first 4 results:', d[1][0:4])
-
-    # Return data for automated testing:
-    # 1044.22 1063.034 1034.58 1054.46
 
     return d[1][0:4]
 
 
 # Run the example code
-ex_avg2()
+if __name__ == '__main__':
+    ex_avg()
+    ex_avg2()
+    print("IDL results: ", [1044.22, 1063.034, 1034.58, 1054.46])
