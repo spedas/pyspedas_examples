@@ -90,5 +90,7 @@ def ex_cdasws():
     # Return 1 as indication that the example finished without problems.
     return 1
 
+
 # Run the example code
-# ex_cdasws()
+if __name__ == '__main__':
+    ex_cdasws()

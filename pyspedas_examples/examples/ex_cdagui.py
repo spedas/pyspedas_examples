@@ -2,9 +2,7 @@
 Instructions on using the cdagui for downloading data from CDAWeb.
 
 Since this is a GUI, only the instructions are printed.
-You have to follow these instructions on a python command line,
-for example the Spyder console in Anaconda.
-
+You have to follow these instructions using a python command line.
 """
 
 
@@ -12,9 +10,9 @@ def ex_cdagui():
     """Instructions on how to use cdagui to download data."""
     # Import pyspedas
     # Run the following import command in a python command line:
-    #     from pyspedas.cdagui.cdagui import cdagui
+    #     from pyspedasimport cdagui
     print("--- In a command line, type the following import command:")
-    print("from pyspedas.cdagui.cdagui import cdagui")
+    print("from pyspedas import cdagui")
     # Open the cdagui by typing
     #     x = cdagui()
     print("x = cdagui()")
@@ -49,5 +47,7 @@ def ex_cdagui():
     # Return 1 as indication that the example finished without problems.
     return 1
 
+
 # Run the example code
-# ex_cdagui()
+if __name__ == '__main__':
+    ex_cdagui()
