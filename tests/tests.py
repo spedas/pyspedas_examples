@@ -101,6 +101,16 @@ class LoadTestCases(unittest.TestCase):
         ex = ex_wavelet()
         self.assertEqual(ex, 1)
 
+    def test_pseudovar_right_axis(self):
+        import pyspedas
+        from pytplot import store_data,options, tplot_options, tplot
+        pyspedas.mms.fpi(datatype='des-moms', trange=['2015-10-16', '2015-10-17'])
+        pyspedas.mms.edp(trange=['2015-10-16', '2015-10-17'], datatype='scpot')
+        options('mms1_edp_scpot_fast_l2', 'yrange', [10, 100])
+        store_data('spec', data=['mms1_des_energyspectr_omni_fast', 'mms1_edp_scpot_fast_l2'])
+        options('spec', 'right_axis', True)
+        tplot_options('xmargin', [0.1, 0.2])
+        tplot('spec', xsize=12)
 
 if __name__ == '__main__':
     unittest.main()
