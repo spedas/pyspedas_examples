@@ -12,7 +12,7 @@ from pyspedas.themis import state
 from pyspedas import cotrans, mpause_t96
 
 
-def ex_mpause_t96():
+def ex_mpause_t96(plot=True):
 
     # Set the date and load one day of data
     date_start = '2019-01-05/00:00:00'
@@ -47,7 +47,8 @@ def ex_mpause_t96():
     plt.ylabel('Y (Re)')
     plt.title('Magnetopause Boundary')
     plt.grid(True)
-    plt.show()
+    if plot:
+        plt.show()
 
 
 # Run the example code

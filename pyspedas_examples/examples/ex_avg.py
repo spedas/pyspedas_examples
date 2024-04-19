@@ -40,7 +40,7 @@ def ex_avg(plot=True):
     return 1
 
 
-def ex_avg2():
+def ex_avg2(plot=True):
     """Load some random data and find the time average.
 
     The same example can be run on IDL to compare results.

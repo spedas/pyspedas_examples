@@ -9,7 +9,7 @@ from pyspedas.cotrans.cotrans_lib import submag2geo
 from pyspedas.themis import state
 
 
-def ex_cotrans():
+def ex_cotrans(plot=True):
     """Transform state data for THEMIS from GEI to GSE.
 
     Load position and velocity from THEMIS.
@@ -42,7 +42,8 @@ def ex_cotrans():
     options(vel_in, 'legend_names', ["Vx, GEI", "Vy, GEI", "Vz, GEI"])
     options(vel_out, 'ytitle', vel_out)
     options(vel_out, 'legend_names', ["Vx, GSE", "Vy, GSE", "Vz, GSE"])
-    tplot([pos_in, vel_in, pos_out, vel_out])
+    if plot:
+        tplot([pos_in, vel_in, pos_out, vel_out])
 
     # Return 1 as indication that the example finished without problems.
     return 1

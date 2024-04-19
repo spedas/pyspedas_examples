@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from pyspedas import mpause_2
 
 
-def ex_mpause_2():
+def ex_mpause_2(plot=True):
 
     # Call the function without parameters to use default values
     xmp, ymp = mpause_2()
@@ -36,7 +36,8 @@ def ex_mpause_2():
     plt.title("Magnetopause Locations")
 
     # Display the plot
-    plt.show()
+    if plot:
+     plt.show()
 
 
 # Run the example code

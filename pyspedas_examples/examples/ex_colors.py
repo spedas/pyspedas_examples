@@ -5,7 +5,7 @@ from pytplot import tplot, options
 from pyspedas.themis import state
 
 
-def ex_colors():
+def ex_colors(plot=True):
     """Get state data for THEMIS
 
     Load position and velocity from THEMIS and plot with different colors.
@@ -24,7 +24,8 @@ def ex_colors():
 
     # choose line colors
     options('tha_pos', 'color', ['black', 'magenta', 'cyan'])
-    tplot(['tha_pos', 'tha_vel', ])
+    if plot:
+        tplot(['tha_pos', 'tha_vel', ])
 
    # Return 1 as indication that the example finished without problems.
     return 1
