@@ -12,15 +12,20 @@ mth5 tools allow user to load ground-based magnetic field measurements from Inte
 | THEMIS-ARTEMIS-Post-AGU2023_load_fdsn_example.ipynb | Notebook presented at THEMIS/ARTEMIS Post AGU 2023                        |
 
 # Installation note
-
-PySPEDAS mth5 tool is under active development. If you would like to execute the examples you need to install appropriate `pyspedas` (mth5 branch), `mt_metadata` (main branch), and `mth5` (master branch) packages.
+If you would like to execute the examples you need to install `pyspedas` and `mth5` packages. In addition, you need to have `jupyter` packed installed:
 ```
-pip install git+https://github.com/spedas/pyspedas.git@mth5
+pip install pyspedas
+pip install mth5
+pip install jupyter
+```
+
+
+# Installation from git repositories
+If you encounter an installation problem, you can try to install packages from git repositories, including `mt_metadata`.   
+
+```
+pip install git+https://github.com/spedas/pyspedas.git
 pip install git+https://github.com/kujaku11/mt_metadata.git
 pip install git+https://github.com/kujaku11/mth5.git
 ```
 
-In addition, you need to have `jupyter` packed installed:
-```
-pip install jupyter
-```
