@@ -9,7 +9,7 @@ For more information on cdasws, see:
 """
 
 from cdasws import CdasWs
-from pyspedas.cdagui.cdaweb import CDAWeb
+from pyspedas import CDAWeb
 
 
 def ex_cdasws():
@@ -56,7 +56,7 @@ def ex_cdasws():
     # Delete the cdas instance
     del cdas
 
-    # Now use the simplified functions from pyspedas.cdagui.cdaweb
+    # Now use the simplified functions from pyspedas
     cdaw = CDAWeb()
     print()
     print("==========================================================")
