@@ -6,13 +6,13 @@ one with a spectrogram.
 
 """
 
-from pytplot import del_data, options, tplot_options, ylim, tplot
+from pyspedas import del_data, options, tplot_options, ylim, tplot
 from pyspedas.themis import state, sst
 
 
 def ex_spectra(plot=True):
     """Download THEMIS data and create a plot."""
-    # Delete any existing pytplot variables
+    # Delete any existing tplot variables
     del_data()
 
     # Download THEMIS data for 2015-12-31

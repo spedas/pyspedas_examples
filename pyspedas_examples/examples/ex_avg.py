@@ -5,20 +5,20 @@ Download GMAG data and average over 5 min.
 
 """
 import random
-from pytplot import del_data, get_data, store_data, tplot_options, tplot, subtract_average
+from pyspedas import del_data, get_data, store_data, tplot_options, tplot, subtract_average
 from pyspedas import avg_data
 from pyspedas.themis import gmag
 
 
 def ex_avg(plot=True):
     """Load GMAG data and average over 5 min intervals."""
-    # Delete any existing pytplot variables.
+    # Delete any existing tplot variables.
     del_data()
 
     # Define a time rage as a list
     trange = ['2007-03-23', '2007-03-23']
 
-    # Download gmag files and load data into pytplot variables.
+    # Download gmag files and load data into tplot variables.
     sites = ['ccnv']
     var = 'thg_mag_ccnv'
     gmag(sites=sites, trange=trange, varnames=[var])

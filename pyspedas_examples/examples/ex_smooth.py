@@ -1,11 +1,11 @@
 """
-Applies the tsmooth function using pytplot only.
+Applies the tsmooth function using pyspedas only.
 
 This can be compared to the similar IDL function.
 
 """
 
-from pytplot import store_data, get_data, tplot, tsmooth, options
+from pyspedas import store_data, get_data, tplot, tsmooth, options
 
 
 def ex_smooth(plot=True):

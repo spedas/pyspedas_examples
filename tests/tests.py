@@ -93,7 +93,7 @@ class LoadTestCases(unittest.TestCase):
 
     def test_pseudovar_right_axis(self):
         import pyspedas
-        from pytplot import store_data,options, tplot_options, tplot
+        from pyspedas import store_data,options, tplot_options, tplot
         pyspedas.mms.fpi(datatype='des-moms', trange=['2015-10-16', '2015-10-17'])
         pyspedas.mms.edp(trange=['2015-10-16', '2015-10-17'], datatype='scpot')
         options('mms1_edp_scpot_fast_l2', 'yrange', [10, 100])

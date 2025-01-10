@@ -28,7 +28,7 @@ Notes
 
 """
 import pyspedas
-import pytplot
+import pyspedas
 from pyspedas.themis.cotrans.dsl2gse import dsl2gse
 
 
@@ -42,15 +42,15 @@ def ex_dsl2gse(plot=True):
     dsl2gse('tha_fgl_dsl', 'tha_fgl_gse')
 
     # Get the third component only
-    d_in = pytplot.get_data('tha_fgl_dsl')
-    pytplot.store_data('z_dsl', data={'x': d_in[0], 'y': d_in[1][:, 2]})
-    d_out = pytplot.get_data('tha_fgl_gse')
-    pytplot.store_data('z_gse', data={'x': d_out[0], 'y': d_out[1][:, 2]})
+    d_in = pyspedas.get_data('tha_fgl_dsl')
+    pyspedas.store_data('z_dsl', data={'x': d_in[0], 'y': d_in[1][:, 2]})
+    d_out = pyspedas.get_data('tha_fgl_gse')
+    pyspedas.store_data('z_gse', data={'x': d_out[0], 'y': d_out[1][:, 2]})
 
     # Plot
-    pytplot.tplot_options('title', 'tha_fgl DSL and GSE, 2017-03-23')
+    pyspedas.tplot_options('title', 'tha_fgl DSL and GSE, 2017-03-23')
     if plot:
-        pytplot.tplot(['tha_fgl_dsl', 'tha_fgl_gse', 'z_dsl', 'z_gse'])
+        pyspedas.tplot(['tha_fgl_dsl', 'tha_fgl_gse', 'z_dsl', 'z_gse'])
 
     # Return 1 as indication that the example finished without problems.
     return 1

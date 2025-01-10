@@ -5,13 +5,13 @@ Download THEMIS data, subtract average, and plot it.
 
 """
 
-from pytplot import del_data, subtract_average, subtract_median, tplot
+from pyspedas import del_data, subtract_average, subtract_median, tplot
 from pyspedas.themis import state
 
 
 def ex_analysis(plot=True):
     """Create a plot with THEMIS data."""
-    # Delete any existing pytplot variables
+    # Delete any existing tplot variables
     del_data()
 
     # Download THEMIS state data for 2015-12-31

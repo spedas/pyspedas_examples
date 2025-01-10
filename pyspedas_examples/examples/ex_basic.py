@@ -4,13 +4,13 @@ Basic example to verify that the installation works correctly.
 Download THEMIS data and plot it.
 """
 
-from pytplot import del_data, get_data, store_data, tplot, tplot_options, options, ylim
+from pyspedas import del_data, get_data, store_data, tplot, tplot_options, options, ylim
 from pyspedas.themis import state
 
 
 def ex_basic(plot=True):
     """Download and plot THEMIS data."""
-    # Delete any existing pytplot variables
+    # Delete any existing tplot variables
     del_data()
 
     # Download THEMIS state data for 2015-12-31
@@ -26,7 +26,7 @@ def ex_basic(plot=True):
     # For example, we could convert the data to km:
     data = data / 1000.0
 
-    # Store a new pytplot variable
+    # Store a new tplot variable
     store_data("tha_position", data={'x': time, 'y': data})
 
     # Define the y-axis limits

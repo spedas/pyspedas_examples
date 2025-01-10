@@ -31,18 +31,18 @@ def ex_cdagui():
     # Click 'Exit' to close the GUI
     print("--- Click 'Exit' to close the GUI.")
     # Type the following on the python command line and press Shift+Enter
-    #   import pytplot
-    #   pytplot.tplot_names()
+    #   import pyspedas
+    #   pyspedas.tplot_names()
     # You should get a list of tplot variables loaded.
     print("--- Type the following on the python command line\
  and press Shift+Enter.")
-    print("import pytplot")
-    print("pytplot.tplot_names()")
+    print("import pyspedas")
+    print("pyspedas.tplot_names()")
     print("--- You should get the list of loaded tplot variables.")
     # Type the following to create a plot:
-    #   pytplot.tplot('thb_fgs_dsl')
+    #   pyspedas.tplot('thb_fgs_dsl')
     print("--- Type the following to create a plot:")
-    print("pytplot.tplot('thb_fgs_dsl')")
+    print("pyspedas.tplot('thb_fgs_dsl')")
 
     # Return 1 as indication that the example finished without problems.
     return 1

@@ -7,7 +7,7 @@ This is similar to the IDL example crib_magnetopause.pro (second part).
 """
 
 import matplotlib.pyplot as plt
-from pytplot import get_data
+from pyspedas import get_data
 from pyspedas.themis import state
 from pyspedas import cotrans, mpause_t96
 

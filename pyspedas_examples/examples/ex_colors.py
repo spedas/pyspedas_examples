@@ -1,7 +1,7 @@
 """
-Example of use of line colors with pytplot
+Example of use of line colors with pyspedas
 """
-from pytplot import tplot, options
+from pyspedas import tplot, options
 from pyspedas.themis import state
 
 

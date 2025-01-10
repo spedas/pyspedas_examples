@@ -5,14 +5,14 @@ Shows how to get the names of GMAG stations and how to download GMAG data
 either from a single station or a GMAG group.
 
 """
-from pytplot import del_data, tplot_options, tplot, tplot_names
+from pyspedas import del_data, tplot_options, tplot, tplot_names
 from pyspedas import subtract_average, tnames
 from pyspedas.themis.ground.gmag import gmag, gmag_list
 
 
 def ex_gmag(plot=True):
     """Demonstrate how to use gmag functions."""
-    # Delete any existing pytplot variables
+    # Delete any existing tplot variables
     del_data()
 
     # Define a time rage as a list
@@ -21,7 +21,7 @@ def ex_gmag(plot=True):
     # Get a list of EPO gmag stations
     sites = gmag_list('epo')
 
-    # Download gmag files and load data into pytplot variables
+    # Download gmag files and load data into tplot variables
     gmag(sites=sites, trange=trange)
 
     # Get a list of loaded sites
