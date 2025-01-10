@@ -29,15 +29,15 @@ Notes
 """
 import pyspedas
 import pyspedas
-from pyspedas.themis.cotrans.dsl2gse import dsl2gse
+from pyspedas.projects.themis.cotrans.dsl2gse import dsl2gse
 
 
 def ex_dsl2gse(plot=True):
     """Run dsl2gse."""
     time_range = ['2017-03-23 00:00:00', '2017-03-23 23:59:59']
-    pyspedas.themis.state(probe='a', trange=time_range, get_support_data=True,
+    pyspedas.projects.themis.state(probe='a', trange=time_range, get_support_data=True,
                           varnames=['tha_spinras', 'tha_spindec'])
-    pyspedas.themis.fgm(probe='a', trange=time_range, varnames=['tha_fgl_dsl'])
+    pyspedas.projects.themis.fgm(probe='a', trange=time_range, varnames=['tha_fgl_dsl'])
 
     dsl2gse('tha_fgl_dsl', 'tha_fgl_gse')
 

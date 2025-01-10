@@ -6,7 +6,7 @@ See also: http://spedas.org/wiki/index.php?title=Cotrans
 from pyspedas import options,   tplot_options, tplot
 from pyspedas import cotrans
 from pyspedas.cotrans.cotrans_lib import submag2geo
-from pyspedas.themis import state
+from pyspedas.projects.themis import state
 
 
 def ex_cotrans(plot=True):

@@ -6,7 +6,7 @@ Download THEMIS data, subtract average, and plot it.
 """
 
 from pyspedas import del_data, subtract_average, subtract_median, tplot
-from pyspedas.themis import state
+from pyspedas.projects.themis import state
 
 
 def ex_analysis(plot=True):

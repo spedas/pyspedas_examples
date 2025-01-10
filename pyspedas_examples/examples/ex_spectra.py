@@ -7,7 +7,7 @@ one with a spectrogram.
 """
 
 from pyspedas import del_data, options, tplot_options, ylim, tplot
-from pyspedas.themis import state, sst
+from pyspedas.projects.themis import state, sst
 
 
 def ex_spectra(plot=True):

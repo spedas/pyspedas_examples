@@ -7,7 +7,7 @@ either from a single station or a GMAG group.
 """
 from pyspedas import del_data, tplot_options, tplot, tplot_names
 from pyspedas import subtract_average, tnames
-from pyspedas.themis.ground.gmag import gmag, gmag_list
+from pyspedas.projects.themis.ground.gmag import gmag, gmag_list
 
 
 def ex_gmag(plot=True):

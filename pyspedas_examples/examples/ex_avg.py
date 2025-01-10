@@ -7,7 +7,7 @@ Download GMAG data and average over 5 min.
 import random
 from pyspedas import del_data, get_data, store_data, tplot_options, tplot, subtract_average
 from pyspedas import avg_data
-from pyspedas.themis import gmag
+from pyspedas.projects.themis import gmag
 
 
 def ex_avg(plot=True):

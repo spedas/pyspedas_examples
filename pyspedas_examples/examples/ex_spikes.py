@@ -7,7 +7,7 @@ This module demonstrates how to use the function clean_spikes.
 import random
 import pyspedas
 from pyspedas import clean_spikes, del_data, tplot_options, data_quants, tplot, tplot_names
-from pyspedas.themis import gmag
+from pyspedas.projects.themis import gmag
 
 
 def ex_spikes(plot=True):

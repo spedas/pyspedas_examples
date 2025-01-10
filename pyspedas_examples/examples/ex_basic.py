@@ -5,7 +5,7 @@ Download THEMIS data and plot it.
 """
 
 from pyspedas import del_data, get_data, store_data, tplot, tplot_options, options, ylim
-from pyspedas.themis import state
+from pyspedas.projects.themis import state
 
 
 def ex_basic(plot=True):

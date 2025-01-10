@@ -21,7 +21,7 @@ def ex_deriv(plot=True):
     # Download gmag files and load data into pyspedas variables
     sites = ['ccnv']
     var = 'thg_mag_ccnv'
-    pyspedas.themis.gmag(sites=sites, trange=trange, varnames=[var])
+    pyspedas.projects.themis.gmag(sites=sites, trange=trange, varnames=[var])
     # pyspedas.tplot_options('title', 'GMAG data, thg_mag_ccnv 2007-03-23')
     pyspedas.subtract_average(var, median=1)
     var += '-m'

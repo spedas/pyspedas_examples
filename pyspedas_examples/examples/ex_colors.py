@@ -2,7 +2,7 @@
 Example of use of line colors with pyspedas
 """
 from pyspedas import tplot, options
-from pyspedas.themis import state
+from pyspedas.projects.themis import state
 
 
 def ex_colors(plot=True):
