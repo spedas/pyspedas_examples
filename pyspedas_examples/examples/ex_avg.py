@@ -30,7 +30,7 @@ def ex_avg(plot=True):
     avg_data(var, res=5*60.)
     # Five minute average using width (number of measurements).
     # Each measurement is 0.5 sec.
-    avg_data(var, width=5*60.*2., new_names=var + '-avg2')
+    avg_data(var, width=5*60.*2., newname=var + '-avg2')
 
     # Plot.
     if plot:
