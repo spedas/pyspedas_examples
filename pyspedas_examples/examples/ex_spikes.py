@@ -6,8 +6,9 @@ This module demonstrates how to use the function clean_spikes.
 """
 import random
 import pyspedas
-from pyspedas import clean_spikes, del_data, tplot_options, data_quants, tplot, tplot_names
+from pyspedas import clean_spikes, del_data, tplot_options, tplot, tplot_names
 from pyspedas.projects.themis import gmag
+from pyspedas.tplot_tools import data_quants
 
 
 def ex_spikes(plot=True):
@@ -25,7 +26,7 @@ def ex_spikes(plot=True):
     tplot_options('title', 'GMAG data, thg_mag_ccnv, 2007-03-23')
 
     # Add spikes to data.
-    data = pyspedas.data_quants[var].values
+    data = data_quants[var].values
     dlen = len(data)
     for i in range(1, 16):
         s = (1 if random.random() < 0.5 else -1)
@@ -34,7 +35,7 @@ def ex_spikes(plot=True):
         data[p1+2000, 1] = s * i * 30000
         data[p1+4000, 2] = s * i * 20000
 
-    pyspedas.data_quants[var].values = data
+    data_quants[var].values = data
 
     # Clean spikes.
     clean_spikes(var, sub_avg=True)
