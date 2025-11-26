@@ -26,16 +26,16 @@ def ex_spikes(plot=True):
     tplot_options('title', 'GMAG data, thg_mag_ccnv, 2007-03-23')
 
     # Add spikes to data.
-    data = data_quants[var].values
-    dlen = len(data)
+    d=pyspedas.get_data(var)
+    data=d.y
+    dlen=len(data)
     for i in range(1, 16):
         s = (1 if random.random() < 0.5 else -1)
         p1 = int(i*dlen/16)
         data[p1, 0] = s * i * 40000
         data[p1+2000, 1] = s * i * 30000
         data[p1+4000, 2] = s * i * 20000
-
-    data_quants[var].values = data
+    pyspedas.store_data(var,{'x':d.times,'y':data})
 
     # Clean spikes.
     clean_spikes(var, sub_avg=True)
