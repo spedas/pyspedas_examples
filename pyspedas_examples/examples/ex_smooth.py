@@ -14,7 +14,7 @@ def ex_smooth(plot=True):
     y = [3., 5., 8., 15., 20., 1., 2., 3., 4., 5., 6., 4.]
 
     store_data('original', data={'x': t, 'y': y})
-    tsmooth('original', width=5, new_names='smooth', preserve_nans=1)
+    tsmooth('original', width=5, newname='smooth', preserve_nans=1)
     options('smooth', 'ytitle', 'smooth')
 
     if plot:
